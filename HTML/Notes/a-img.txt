@@ -1,0 +1,13 @@
+Anchor tag: Anchor tag is used to connect another page/resource. It is done by 'a' tag and it uses attributes like 
+        href---contains link/path to connect 
+             path means -local
+             link means -cloud
+        target--- We use _blank value to open in new tab
+ex: <a href="path to file" >Click to openfile </a>
+<a href="path to file" download >Click to download the file </a>
+
+images:We can insert images in html using 'img' tag.
+img tag contains attributes
+        src-- contains link/path of the images
+        alt--  contains alternative title which works in the absence of src
+We can even set height and width of the images using 'height' and 'width' properties

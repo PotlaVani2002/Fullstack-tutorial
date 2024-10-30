@@ -1,0 +1,26 @@
+Formatting tags - Formatting tags are used to format the text.
+    1. b tag: to make text in bold format
+    2. strong: make the text bold --user can't find any difference between b and strong tags --search engines will give more importance to strong --The strong element represents strong importance, seriousness or urgency for its contents
+    3. i tag: italic -sleepy letters 
+    4. em tag: emphasis ---make the text in italic form --in user perspective i and em tag has no difference ..but search engines will understand em as stressed emphasis better than i tag.
+    5. u tag: used to make the text underline
+    6. strike tag: used to make the text striked out 
+    7. del tag: used to make the text strike out but search engines will understand these words as deleted 
+    8. ins tag: appears as words got underlined but search engines understands as inserted words
+    9. sup tag:super script --maths formulas --used to make the text as super script 
+    10. sub tag: subscript --formulas chemical --used to make the text as subscript 
+    11. q tag: inserts Quotation's
+address tag: is used for reference - it will show the text in the italic form. --used to note down the address
+br tag: break tag
+hr tag:horizontal line
+code tag: used to write the codes --will change the font size
+kbd tag: used for keyboard shortcuts
+pre tag: used to make text appears exactly how it is written in code editor.
+
+Shortcuts:
+ &lAarr; --left Arrow
+  &rAarr; -- right Arrow
+  &QUOT; --quotation
+  windows+. --select emojis or --symbol code for emoji -#128512 eg for one emoji  
+
+icons : fontawesome cdn

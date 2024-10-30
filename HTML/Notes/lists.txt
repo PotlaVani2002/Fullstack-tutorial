@@ -1,0 +1,46 @@
+Lists are used to list out items. We use daily grocery list, members list, todo list,memu list,contacts list ,etc..
+Some lists needs order and some don't.
+HTML divides lists into 3 categories
+    1. Ordered list:It is used to represent lists which needs an order
+    2. Unordered list:it is used to represent lists which doesn't need any order.
+    3. Definition lists:it is used to represent lists which needs to be explained
+
+1.Ordered Lists:
+    --Ordered lists uses 'ol' tag and each list item will be 'li' tag 
+    --ol tag has attributes
+        -type: A,a,i,I,1(default)
+        -start: always takes number only -- we can use start attribute to define where to start our list.
+
+2.Unordered Lists:
+    --unordered Lists uses 'ul' tag and each list item will be 'li' tag
+    --ul tag attributes
+        -type: square,circle,none,disc
+    --default type is bullet points.
+
+3.Definition Lists/Description:
+    --definition lists uses 'dl' tag for list and each list item will be 'dt'- definition term tag and 'dd' -  definition data tag .
+        'dd' - definition data tag -will give some space on left side.
+    <dl>
+        <dt>HTML/dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Styles Sheet</dd>
+        <dt>JS</dt>
+        <dd>Javascript</dd>
+    </dl>
+We can also keep one list inside another list called nested lists. 
+
+
+
+Task:
+Java  
+   Ramu
+   Jaya
+Python
+   Shekar
+   Rani
+C#
+   Suresh 
+   Ramesh
+
+task2:www first project build and deploy the code in netlify 
