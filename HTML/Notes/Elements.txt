@@ -1,0 +1,36 @@
+Tag vs. Element
+        Tag: Represents the individual opening or closing markup, such as <p> or </p>.
+        Element: Consists of both the opening and closing tags along with any content inside them.
+        Example:
+        <p>Hello</p> <!-- "Hello" is the content inside the <p> element -->
+        
+Block vs. Inline Elements
+        Block Elements:
+            Take up the full width of their container by default.
+            Always start on a new line.
+            Common examples: <div>, <h1>, <p>, <section>, and semantic elements like <nav>, <article>.
+        Inline Elements:
+            Take up only as much width as needed for their content.
+            Do not start on a new line; they remain within the line flow.
+            Common examples: <span>, <a>, <img>, <strong>, <em>.
+Note: To place images beside or below text, you can control positioning using inline or block elements like <span> and <div>.
+
+Container Elements: <div> and <span>
+        <div>: A block-level container used to group elements, making them behave as a single block.
+        <span>: An inline container used to group elements within a line.
+
+        Example:
+        <div>
+        <p>This is a block container.</p>
+        </div>
+        <span>This is an inline container.</span>
+
+
+Semantic Elements
+        Purpose: Used to provide meaning to the structure of the document, helping search engines and developers understand the layout without affecting the UI directly.
+        Examples:
+        <nav>: Defines a navigation section.
+        <aside>: Represents content related to the main content (like a sidebar).
+        <article>: Encapsulates self-contained content.
+        <main>: Indicates the main content of the document.
+Note: Semantic elements are generally block elements and contribute to accessible, well-structured HTML.

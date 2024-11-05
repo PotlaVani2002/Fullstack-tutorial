@@ -1,0 +1,66 @@
+<video> Tag
+        Purpose: Used to embed video content within a web page.
+        Usage: By default, it appears as a (image)placeholder if controls are not added.
+        Attributes:
+            controls: Displays play, pause, and other controls.
+            autoplay: Plays the video automatically.
+            muted: Should be used when using autoplay (required by Chrome to avoid autoplaying sound).
+        
+        Example:
+        <video src="video.mp4" controls autoplay muted></video>
+
+<audio> Tag
+        Purpose: Used to embed audio files on a web page.
+        Usage: Needs controls to display audio player controls like play, pause, etc.
+
+        Example:
+        <audio src="audio.mp3" controls></audio>
+
+<iframe> Tag
+        Purpose: Embeds external resources such as YouTube videos, PDFs, and maps.
+        Attributes:
+            src: The URL of the embedded content.
+            width and height: Dimensions of the embedded frame.
+
+        Example:
+        <iframe src="https://www.youtube.com/embed/video_id" width="560" height="315" allowfullscreen></iframe>
+
+<picture> Tag
+        Purpose: Allows for more responsive images by specifying different image sources for different screen sizes or resolutions.
+
+        Example:
+        <picture>
+        <source srcset="image-small.jpg" media="(max-width: 600px)">
+        <source srcset="image-large.jpg" media="(min-width: 601px)">
+        <img src="image.jpg" alt="Description">
+        </picture>
+
+<figure> and <figcaption> Tags
+        Purpose:
+        <figure>: Used to group media elements, such as images or diagrams, with a caption.
+        <figcaption>: Provides a caption for the content inside the <figure> tag.
+
+        Example:
+        <figure>
+        <img src="image.jpg" alt="Description">
+        <figcaption>This is the caption for the image.</figcaption>
+        </figure>
+
+<source> Tag
+        Purpose: Defines multiple media resources for elements like <video>, <audio>, and <picture>.
+        Attributes:
+            srcset for <picture>, src for <audio> and <video>.
+            media for specifying conditions (useful for <picture>).
+
+        Example with <video>:
+        <video controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Your browser does not support the video tag.
+        </video>
+
+
+NOTE:
+
+1. Audio and Video Separation: Audio cannot be directly combined with a <video> element; they must be handled separately.
+2.Display Type: These tags are not all inline by default; for example, <audio>, <video>, <figure>, and <iframe> are block-level elements.
