@@ -7,7 +7,9 @@ ex: <a href="path to file" >Click to openfile </a>
 <a href="path to file" download >Click to download the file </a>
 
 images:We can insert images in html using 'img' tag.
+HTML attributes are special words used inside the opening tag of an element to control the element's behavior.
 img tag contains attributes
         src-- contains link/path of the images
         alt--  contains alternative title which works in the absence of src
 We can even set height and width of the images using 'height' and 'width' properties
+An element without a closing tag is known as a void element.

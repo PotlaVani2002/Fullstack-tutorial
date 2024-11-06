@@ -1,6 +1,7 @@
 <video> Tag
+        We can include video into html using video element. Video element uses source tag to define the source  of video to load.
         Purpose: Used to embed video content within a web page.
-        Usage: By default, it appears as a (image)placeholder if controls are not added.
+        Usage: By default, it appears as a (image)placeholder if controls attribute are not added.
         Attributes:
             controls: Displays play, pause, and other controls.
             autoplay: Plays the video automatically.
@@ -25,6 +26,8 @@
         Example:
         <iframe src="https://www.youtube.com/embed/video_id" width="560" height="315" allowfullscreen></iframe>
 
+
+For Picture , We can use either figure tag or picture tag .
 <picture> Tag
         Purpose: Allows for more responsive images by specifying different image sources for different screen sizes or resolutions.
 
@@ -36,6 +39,7 @@
         </picture>
 
 <figure> and <figcaption> Tags
+        The figure element represents self-contained content and will allow you to associate an image with a caption.
         Purpose:
         <figure>: Used to group media elements, such as images or diagrams, with a caption.
         <figcaption>: Provides a caption for the content inside the <figure> tag.
@@ -47,6 +51,7 @@
         </figure>
 
 <source> Tag
+        self closing tag.
         Purpose: Defines multiple media resources for elements like <video>, <audio>, and <picture>.
         Attributes:
             srcset for <picture>, src for <audio> and <video>.

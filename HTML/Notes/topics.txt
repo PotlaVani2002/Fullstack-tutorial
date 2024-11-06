@@ -1,0 +1,12 @@
+Headings(h1...h6)
+Paragraphs(p)
+images(img)
+anchor(a)
+formatting tags -<code>,<pre>,<kbd>,<address>,<q>,<b>,<i>,<u>,<strong>,<del>,<strike>,<ins>,<em>,<sub>,<sup>,<br>,<hr>
+lists -- <ol>,<li>, <ul>, <dl>(<dt>,<dd>)
+elements -- <div>,<span>
+media -- <figure>,<figcaption>, <picture>,<source>,<video>,<audio>,<iframe>
+
+
+
+
