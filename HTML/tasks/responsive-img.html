@@ -1,0 +1,27 @@
+<!-- Develop an HTML page that uses responsive image techniques, including the srcset attribute, to serve different image sizes based on device width.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Techniques</title>
+</head>
+<body>
+    <picture>
+        <source 
+            media="(min-width: 992px)" 
+            srcset="https://i.pinimg.com/736x/91/a2/f9/91a2f91d5b755678023430eeece0aeed.jpg">
+        <source 
+            media="(min-width: 768px)" 
+            srcset="https://i.pinimg.com/736x/e3/f3/4d/e3f34de992ae4267f272550a5935447f.jpg">
+        <source 
+            media="(min-width: 480px)" 
+            srcset="https://tradeflock.com/wp-content/uploads/2022/05/20220511_1200x800px_N_Most-Popular-Cartoons-in-India.webp">
+        <img 
+            src="../code/images/shinchan.png" 
+            alt="Responsive Cartoon Image" 
+            style="max-width: 100%; height: auto;">
+    </picture>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+    <form action="/submit-form" method="POST">
+        <fieldset>
+            <legend>Job Application</legend>
+            <div>
+                <label for="firstname">Full Name: </label>
+                <input type="text" placeholder="Firstname" id="firstname" required>
+                <input type="text" placeholder="Lastname" id="lastname" required>
+            </div><br>
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" id="username" min="6" required>
+            </div><br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" required>
+            </div><br>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" minlength="8" maxlength="12" pattern="[A-Za-z0-9]+" id="password"
+                    title="Password must contain only alphanumeric characters." required>
+            </div><br>
+            <div>
+                <label for="date">Date of Birth: </label>
+                <input type="date" id="dob" max="2006-01-01" required>
+            </div><br>
+            <div>
+                <label>Gender: </label>
+                <input type="radio" name="gender" id="male" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="Others">
+                <label for="others">Others</label>
+            </div><br>
+            <div>
+                <label for="lang">Languages Known: </label>
+                <input type="checkbox" name="languages" id="English" value="English">
+                <label for="English">English</label>
+                <input type="checkbox" name="languages" id="Telugu" value="Telugu">
+                <label for="Telugu">Telugu</label>
+                <input type="checkbox" name="languages" id="Hindi" value="Hindi">
+                <label for="Hindi">Hindi</label>
+                <input type="checkbox" name="languages" id="Others" value="Others">
+                <label for="Others">Others</label>
+            </div><br>
+            <div>
+                <label for="mobile">Mobile Number: </label>
+                <input type="tel" id="mobile" pattern="[6-9]{1}[0-9]{9}" title="Enter a valid 10-digit mobile number."
+                    required>
+            </div><br>
+            <div>
+                <label for="address">Address: </label>
+                <textarea id="address" rows="4" cols="30" required></textarea>
+            </div><br>
+            <div>
+                <label>select branch:</label>
+                <select name="branch" id="branch" multiple size="3">
+                    <optgroup label="ENGG">
+                        <option name="branch" value="CSE">CSE</option>
+                        <option name="branch" value="eee">EEE</option>
+                        <option name="branch" value="civil">CIVIL</option>
+                    </optgroup>
+                    <optgroup label="Degree">
+                        <option name="branch" value="BSC">BSC</option>
+                        <option name="branch" value="B,com">B.com</option>
+
+                    </optgroup>
+                    <optgroup label="Post-graduation">
+                        <option name="branch" value="M.tech">M.tech</option>
+                    </optgroup>
+
+                </select>
+            </div><br>
+            <div>
+                <label for="experience">Experience (in years): </label>
+                <input type="number" id="experience" min="0" required>
+            </div><br>
+            <div>
+                <label for="skills">Skills: </label>
+                <datalist id="skill-options">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C">C</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                </datalist>
+                <input type="text" list="skill-options" id="skills" name="skills" required>
+            </div><br>
+            <div>
+                <label for="resume">Resume: </label>
+                <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+            </div><br>
+            <div>
+                <label for="photo">Passport Size Photo: </label>
+                <input type="file" id="photo" accept=".png,.jpeg,.jpg" required>
+            </div><br>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
