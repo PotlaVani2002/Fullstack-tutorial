@@ -88,7 +88,7 @@ Explanation: HTML5 introduces new input types like email, date, number, and colo
 
 4. Canvas Element
 The canvas element allows for dynamic, scriptable rendering of 2D shapes and bitmap images.
-
+An empty canvas will be created to modify in JS.
 Example:
 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
 <script>
@@ -319,3 +319,6 @@ Example: Triggering on Click
 Explanation:
 
 begin="click": The animation starts when the user clicks on the circle.
+
+Drag and Drop: We can even perform drag and drop by setting draggable="true" and trigger in JS.
+Data Attributes: We can even store data inside HTML elements using data attributes.
