@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Anchor Tag Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .example {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .example h2 {
+            margin-top: 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        span{
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="anchor">HTML Anchor Tag</h1>
+    <p>The <span>&lt;a&gt;</span> tag creates hyperlinks that connect web pages, files, emails, or phone numbers. Below are examples demonstrating its possibilities:</p>
+
+    <!-- Basic Link -->
+    <div class="example">
+        <h2>Basic Link</h2>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code></pre>
+        <a href="https://www.example.com">Visit Example.com</a>
+        <p class="note">The <span>href</span> attribute specifies the URL the link points to.</p>
+    </div>
+
+    <!-- Open Link in a New Tab -->
+    <div class="example">
+        <h2>Open Link in a New Tab</h2>
+        <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example.com in a new tab&lt;/a&gt;</code></pre>
+        <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a>
+        <p class="note">The <span>target="_blank"</span> attribute opens the link in a new tab or window.</p>
+    </div>
+
+    <!-- Email Link -->
+    <div class="example">
+        <h2>Email Link</h2>
+        <pre><code>&lt;a href="mailto:contact@example.com"&gt;Send an Email&lt;/a&gt;</code></pre>
+        <a href="mailto:contact@example.com">Send an Email</a>
+        <p class="note">Use <span>mailto:</span> followed by an email address to create an email link.</p>
+    </div>
+
+    <!-- Telephone Link -->
+    <div class="example">
+        <h2>Telephone Link</h2> 
+        <pre><code>&lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;</code></pre>        
+        <a href="tel:+1234567890">Call Us</a>
+        <p class="note">Use <span>tel:</span> followed by a phone number to create a telephone link.</p>
+    </div>
+
+    <!-- Link to a Section on the Same Page -->
+    <div class="example">
+        <h2>Link to a Section on the Same Page</h2>
+        <pre><code>&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;</code></pre>
+        <a href="#anchor">Go to Starting of the page</a>
+        <p class="note">Use <span>#id</span> to link to an element with a corresponding <code>id</code> attribute.</p>
+        <p id="section1">This is Section 1. You have successfully navigated here!</p>
+    </div>
+
+    <!-- Link to a File -->
+    <div class="example">
+        <h2>Link to a File</h2>
+        <pre><code>&lt;a href="./files/example.pdf" download&gt;Download Example PDF&lt;/a&gt;</code></pre>
+        <a href="./files/example.pdf" download>Download Example PDF</a>
+        <p class="note">The <span>download</span> attribute suggests downloading the file instead of opening it.</p>
+    </div>
+
+    <!-- Link with Tooltip -->
+    <div class="example">
+        <h2>Link with Tooltip</h2>
+        <pre><code>&lt;a href="https://www.example.com" title="Go to Example.com"&gt;Hover over me&lt;/a&gt;</code></pre>
+        <a href="https://www.example.com" title="Go to Example.com">Hover over me</a>
+        <p class="note">The <span>title</span> attribute displays a tooltip when the user hovers over the link.</p>
+    </div>
+
+    <!-- Styled Link -->
+    <div class="example">
+        <h2>Styled Link</h2>
+        <pre><code>&lt;a href="https://www.example.com" style="color: red; font-weight: bold;"&gt;Custom Styled Link&lt;/a&gt;</code></pre>
+        <a href="https://www.example.com" style="color: red; font-weight: bold;">Custom Styled Link</a>
+        <p class="note">Use the <span>style</span> attribute or CSS for custom link styling.</p>
+    </div>
+
+    <!-- Link with Rel Attribute -->
+    <div class="example">
+        <h2>Link with Rel Attribute</h2>
+        <pre><code>&lt;a href="https://www.example.com" target="_blank" rel="noopener noreferrer"&gt;Secure External Link&lt;/a&gt;</code></pre>
+        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Secure External Link</a>
+        <p class="note">The <span>rel="noopener noreferrer"</span> attribute improves security and prevents the new page from accessing the <code>window.opener</code> object.</p>
+    </div>
+    <!-- Images can be linked, just like text. -->
+     <div class="example">
+        <h2>Images can be linked, just like text.</h2>
+        <pre><code>&lt;a href="./images/shinchan.png" &gt; 
+        &lt;img src="./images/shinchan.png"
+        alt="Click me for a larger view" /&gt;
+&lt;/a&gt;</code></pre>
+		<a href="./images/shinchan.png">
+			<img
+				src="./images/shinchan.png"
+				alt="Click me for a larger view" />
+		</a>
+     </div>
+</body>
+</html>

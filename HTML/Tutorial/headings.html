@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Headings Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 20px;
+            color:#333;
+        }
+        .heading-section {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+        span{
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Headings</h1>
+    <p>HTML headings are used to define the structure and hierarchy of a document.</p>
+    <p>HTML provides six levels of headings, <span>&lt;h1&gt; </span> (Highest) through <span>&lt;h6&gt;</span> (Lowest), used to structure content hierarchically.</p>
+    <p>Use headings to provide a clear and logical structure to your content.</p>
+    <p>Search engines use headings to understand the hierarchy of your content and improve SEO.</p>
+    <div class="heading-section">
+        <h1>Heading Level 1 (h1)</h1>
+        <p class="note">Used for the most important titles or page headers. Default font size: ~32px.</p>
+        
+        <h2>Heading Level 2 (h2)</h2>
+        <p class="note">Typically used for subsections under the main header. Default font size: ~24px.</p>
+
+        <h3>Heading Level 3 (h3)</h3>
+        <p class="note">For smaller subsections. Default font size: ~18.72px.</p>
+
+        <h4>Heading Level 4 (h4)</h4>
+        <p class="note">For content of lesser importance. Default font size: ~16px.</p>
+
+        <h5>Heading Level 5 (h5)</h5>
+        <p class="note">Used for minor content headings. Default font size: ~13.28px.</p>
+
+        <h6>Heading Level 6 (h6)</h6>
+        <p class="note">Smallest and least important heading. Default font size: ~10.72px.</p>
+    </div>
+
+    <div class="heading-section">
+        <h2>Example Code</h2>
+        <pre><code>
+    &lt;h1&gt;Heading level 1&lt;/h1&gt;
+    &lt;h2&gt;Heading level 2&lt;/h2&gt;
+    &lt;h3&gt;Heading level 3&lt;/h3&gt;
+    &lt;h4&gt;Heading level 4&lt;/h4&gt;
+    &lt;h5&gt;Heading level 5&lt;/h5&gt;
+    &lt;h6&gt;Heading level 6&lt;/h6&gt;
+        </code></pre>
+    </div>
+
+    <div class="heading-section">
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Use <code>&lt;h1&gt;</code> only once per page, typically for the main title.</li>
+            <li>Maintain a logical order (e.g., avoid skipping from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code>).</li>
+            <li>Use headings to improve accessibility and SEO.</li>
+        </ul>
+    </div>
+</body>
+</html>

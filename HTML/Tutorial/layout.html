@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Comments Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            color:#333;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .comment-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        .comments {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Layout and Comments</h1>
+    <div>
+        <p>HTML documents typically have a standard structure, including &lt;!DOCTYPE &gt;, &lt;html&gt;, &lt;head&gt;,
+            and &lt;body&gt;
+            elements. </p>
+        <p> The &lt;!DOCTYPE&gt; declaration specifies the document type and version.</p>
+        <p>The &lt;html&gt; element is the root element of the document.The HTML document itself begins with
+            &lt;html&gt; and ends with &lt;/html&gt;.</p>
+        <p>The &lt;head&gt; section contains metadata, while the &lt;body&gt; section contains visible content.</p>
+    </div>
+
+    <div class="comment-section">
+        <h2>Document Type Declaration</h2>
+        <p>
+            Declares the document type as HTML5. <br>
+            It must be the very first line in the document. <br>
+            The &lt;!DOCTYPE&gt; declaration is not case sensitive. <br>
+            Helps the browser correctly interpret and render the HTML code. <br>
+        </p>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+    </div>
+
+    <div class="comment-section">
+        <h2>HTML Tag</h2>
+        <p>
+            The root element of the document. <br>
+            The <code>lang</code> attribute specifies the language,
+            improving accessibility and SEO.
+        </p>
+        <pre><code>&lt;html lang="en"&gt;</code></pre>
+
+    </div>
+
+    <div class="comment-section">
+        <h2>Head Section</h2>
+        <p>
+            Contains metadata about the document (e.g., character encoding, title, and viewport settings). <br>
+            Metadata is not displayed on the web page but is essential for proper rendering and functionality.
+        </p>
+        <pre><code>&lt;head&gt; ... &lt;/head&gt;</code></pre>
+
+    </div>
+
+    <div class="comment-section">
+        <h2>Body Section</h2>
+        <p>
+            The <code>&lt;body&gt;</code> element contains all the visible content rendered on the page, such as text,
+            images, and links.
+        </p>
+        <pre><code>&lt;body&gt; ... &lt;/body&gt;</code></pre>
+
+    </div>
+    <div class="comment-section">
+        <h2>Comments</h2>
+        <p>HTML comments are not displayed in the browser, but they can help document your HTML source code.</p>
+        <pre><code>&lt; !-- Comments --&gt;</code></pre>
+
+    </div>
+    <div class="comment-section">
+        <h2>Example Code</h2>
+        <pre>
+<code>&lt;!DOCTYPE html&gt; <span class="comments"> &lt;!-- Declaration of the document type as HTML5 --&gt;</span>
+&lt;html lang="en"&gt; &lt;<span class="comments">!-- Root element with language as English --&gt;</span>
+&lt;head&gt; &lt;<span class="comments">!-- Metadata section --&gt;</span>
+    &lt;meta charset="UTF-8"&gt; &lt;<span class="comments">!-- Specifies that the character encoding for the document is UTF-8, which includes a wide range of characters from various languages. --&gt;</span>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<span class="comments"> &lt;!-- The 'viewport' meta tag is used to control how the document is displayed on different devices. 'width=device-width' makes the document width match the screen width, and 'initial-scale=1.0' sets the initial zoom level to 100%.-- &gt;</span>
+    &lt;title&gt;Document&lt;/title&gt; &lt;<span class="comments">!-- Sets the title of the document, which appears on the browser tab or window.  --&gt;</span>
+&lt;/head&gt;
+&lt;body&gt; &lt;<span class="comments">!-- Visible page content --&gt</span>
+    &lt;p&gt;Hello World&lt;/p&gt; &lt;<span class="comments">!-- A paragraph element --&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</code>
+        </pre>
+    </div>
+</body>
+
+</html>
