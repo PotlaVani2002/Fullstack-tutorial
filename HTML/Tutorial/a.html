@@ -37,6 +37,7 @@
         code {
             font-family: monospace;
             color: #d63384;
+            font-size: 16px;
         }
 
         a {
@@ -75,6 +76,14 @@
         <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example.com in a new tab&lt;/a&gt;</code></pre>
         <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a>
         <p class="note">The <span>target="_blank"</span> attribute opens the link in a new tab or window.</p>
+        <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+        <p>The target attribute specifies where to open the linked document.</p>
+        <p>The target attribute can have one of the following values:</p>
+            
+           <pre>_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window</pre>
     </div>
 
     <!-- Email Link -->
@@ -140,9 +149,9 @@
         &lt;img src="./images/shinchan.png"
         alt="Click me for a larger view" /&gt;
 &lt;/a&gt;</code></pre>
-		<a href="./images/shinchan.png">
+		<a href="../code/images/shinchan.png">
 			<img
-				src="./images/shinchan.png"
+				src="../code/images/shinchan.png"
 				alt="Click me for a larger view" />
 		</a>
      </div>

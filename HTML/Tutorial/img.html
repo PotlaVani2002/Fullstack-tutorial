@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Tag Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .info {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        span {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+            font-size: 16px;;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            padding: 10px;
+        }
+        img {
+            display: block;
+            margin: 10px 0;
+            max-width: 100%;
+        }
+        code{
+            font-family: monospace;
+            color:#d63384;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Image Tag</h1>
+
+    <div class="info">
+        <h2>Description</h2>
+        <p>The <span>&lt;img&gt;</span> tag is used to insert images into an HTML document. It is a **void element**, meaning it does not have a closing tag.</p>
+    </div>
+
+    <div class="info">
+        <h2>Attributes of the <span>&lt;img&gt;</span> Tag</h2>
+        <ul>
+            <li><strong><span>src</span></strong>: Specifies the path or URL of the image file. This is a required attribute.</li>
+            <li><strong><span>alt</span></strong>: Provides alternative text for the image, which is displayed if the image cannot load. This is important for accessibility.</li>
+            <li><strong><span>width</span></strong> and <strong><span>height</span></strong>: Define the width and height of the image in pixels or percentage.</li>
+            <li><strong><span>title</span></strong>: Adds a tooltip when the user hovers over the image.</li>
+            <li><strong><span>loading</span></strong>: Specifies lazy loading behavior for performance optimization. Values can be <span>lazy</span>, <span>eager</span>, or <span>auto</span>.</li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <h2>Example Code</h2>
+        <pre> <code>&lt;img src="example.jpg" alt="A beautiful example image" width="400" height="300" title="Hover to see this text"&gt;
+</code></pre>
+    </div>
+
+    <div class="info">
+        <h2>Example with a Live Image</h2>
+        <img src="https://via.placeholder.com/400x300" alt="Placeholder Image" width="400" height="300" title="This is a sample image">
+    </div>
+
+    <div class="info">
+        <h2>Notes</h2>
+        <ul>
+            <li>The <span>&lt;img&gt;</span> tag does not have a closing tag. Example: <span>&lt;img&gt;</span>.</li>
+            <li>Always include the <span>alt</span> attribute for accessibility and better SEO.</li>
+            <li>Use properly compressed images to improve page load time.</li>
+            <li>For responsive design, use CSS or the <span>max-width</span> property to adjust image sizes.</li>
+        </ul>
+    </div>
+</body>
+</html>

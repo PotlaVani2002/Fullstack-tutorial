@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatting Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info p {
+            margin: 10px 0;
+        }
+        span {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+        code{
+            font-family: monospace;
+            color:#d63384;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Formatting Tags</h1>
+
+    <div class="info">
+        <h2>1. Bold Text</h2>
+        <p><span>&lt;b&gt;</span>: Makes text bold. Visually bold without semantic meaning.</p>
+        <p>Example: <code><b>&lt; b &gt;This is bold text using &lt;b&gt;.</b></code></p>
+        <p><span>&lt;strong&gt;</span>: Makes text bold and adds semantic importance.</p>
+        <p>Example: <code><strong> &lt; strong &gt;This is important text using &lt;strong&gt;.</strong></code></p>
+    </div>
+
+    <div class="info">
+        <h2>2. Italic Text</h2>
+        <p><span>&lt;i&gt;</span>: Makes text italic. Visually italic without semantic meaning.</p>
+        <p>Example: <i>&lt;i&gt;This is italic text using &lt;i&gt;.</i></p>
+        <p><span>&lt;em&gt;</span>: Emphasizes text with semantic meaning.</p>
+        <p>Example: <code><em>&lt;em&gt;This is emphasized text using &lt;em&gt;.</em></code></p>
+    </div>
+
+    <div class="info">
+        <h2>3. Underline</h2>
+        <p><span>&lt;u&gt;</span>: Underlines text.</p>
+        <p>Example: <code><u> &lt;u&gt;This is underlined text using &lt;u&gt;.</u></code></p>
+    </div>
+
+    <div class="info">
+        <h2>4. Strikethrough</h2>
+        <p><span>&lt;strike&gt;</span>: Makes text strikethrough (deprecated in HTML5).</p>
+        <p>Example: <code><strike> &lt; strike &gt;This is strikethrough text using &lt;strike&gt;.</strike></code></p>
+        <pre>                   OR</pre>
+        <p><code><s> &lt; s &gt;This is strikethrough text using &lt;s&gt;.</s></code></p>
+        <p><span>&lt;del&gt;</span>: Represents deleted text semantically.</p>
+        <p>Example: <code><del>&lt;del&gt;This is deleted text using &lt;del&gt;.</del></code></p>
+    </div>
+
+    <div class="info">
+        <h2>5. Inserted Text</h2>
+        <p><span>&lt;ins&gt;</span>: Represents inserted text semantically and is visually underlined.</p>
+        <p>Example: <code><ins> &lt;ins&gt;This is inserted text using &lt;ins&gt;.</ins></code></p>
+    </div>
+
+    <div class="info">
+        <h2>6. Superscript and Subscript</h2>
+        <p><span>&lt;sup&gt;</span>: Makes text superscript (useful in math).</p>
+        <p>Example: <code>E= mc &lt;sup&gt; 2 &lt;/sup&gt;</code></p>
+        <p>Output: E = mc<sup>2</sup></p>
+        <p><span>&lt;sub&gt;</span>: Makes text subscript (useful in chemistry).</p>
+        <p>Example: <code>H &lt;sub&gt; 2 &lt;/sub&gt; O</code></p>
+        <p>Output:  H<sub>2</sub>O</p>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Learn more about HTML formatting tags on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Web Docs</a>.</p>
+    </footer>
+</body>
+</html>
