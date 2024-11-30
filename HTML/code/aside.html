@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aside Tag</title>
+    <style>
+        body{
+            margin:0 auto;
+            font-family: Arial, Helvetica, sans-serif sans-serif;
+            display:flex;
+        }
+        aside{
+            display:flex;
+            flex-direction: column;
+            /*justify-content: flex-start;
+            align-items: center;*/
+            float:left;
+            text-align: center;
+           /* gap:4rem;*/
+            width:20rem;
+            background: linear-gradient(45deg,lightblue,white);
+            font-size:1.2rem;
+        }
+        img{
+            width:10rem;
+            border-radius: 50%;
+            height:10rem;
+            margin-top:3rem;
+            border:2px solid white;
+            margin-left: 5rem;
+        }
+        a{
+            border:2px solid black;
+            border-radius: 20px;
+            padding:0.8rem;
+            text-decoration: none;
+            margin:1rem 3rem;
+            background-color: darkcyan;
+            color:white;
+        }
+        a:hover{
+            background:rgba(103, 148, 180, 0.5);
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <aside class="side_nav">
+        <img src="./images/shinchan.png" alt="">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Bootstrap</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+        <a href="#">ExpressJS</a>
+    </aside>
+</body>
+</html>
