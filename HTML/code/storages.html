@@ -75,7 +75,7 @@
             </article>
         </fieldset>
     </body>
-    <script>
+    <!-- <script>  //Local Storage
         function store(){
             /*console.log(document.getElementById("storageemail").value,
             document.getElementById("storagepassword").value);*/
@@ -93,6 +93,24 @@
         }
         function remove(){
             window.localStorage.removeItem("login_details");
+            document.getElementById("result").innerHTML="";
+        }
+    </script> -->
+    <script>
+        function store(){
+            let obj={
+                "email":document.getElementById("storageemail").value,
+                "password":document.getElementById("storagepassword").value
+            }
+            window.sessionStorage.setItem("login_details",JSON.stringify(obj));
+        }
+        function read(){
+            let str=window.sessionStorage.getItem("login_details");
+            let obj1=JSON.parse(str);
+            document.getElementById("result").innerHTML=obj1.email+"   "+obj1.password;
+        }
+        function remove(){
+            window.sessionStorage.removeItem("login_details");
             document.getElementById("result").innerHTML="";
         }
     </script>
