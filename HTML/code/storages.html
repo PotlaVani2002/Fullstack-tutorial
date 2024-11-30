@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Storages API</title>
+        <style>
+            body{
+                margin:0;
+                box-sizing:border-box;
+                background:linear-gradient(90deg,rgb(170, 163, 163),white);
+            }
+            fieldset{
+               border:1px solid black;
+               margin:20px auto;
+               border-radius:10px;
+               width:20%;
+            }
+            legend{
+                background:linear-gradient(90deg,rgb(130, 221, 130),yellow,orange,red);
+                color:black;
+                padding:10px 20px;
+                font-size:20px;
+                border-radius:10px;
+                border:1px solid red;
+                text-align:center;
+                font-weight:700;
+            }
+            label{
+                display:block;
+                margin:10px;
+                font-family:Comic Sans MS;
+                width:fit-content;
+                padding:5px 10px;
+                border-radius:10px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                font-size:20px;
+            }
+            input{
+                width:300px;
+                height:30px;
+                border:1px solid black;
+                border-radius:10px;
+            }
+            article{
+                margin-bottom: 10px;
+            }
+            button{
+                display:block;
+                width:300px;
+                margin-bottom: 10px;
+                padding:10px;
+                background-color: rgb(77, 147, 77,0.7);
+                border:1px solid yellowgreen;
+                border-radius:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Storage API's</legend>
+            <article>
+                <label for="storageemail">Email</label>
+                <input type="email" name="" id="storageemail">
+            </article>
+            <article>
+                <label for="storagepassword">Password</label>
+                <input type="password" name="" id="storagepassword">
+            </article>
+            <article>
+                <button onclick="store()">Store</button>
+                <button onclick="read()">Read</button>
+                <button onclick="remove()">Delete</button>
+            </article>
+        </fieldset>
+    </body>
+    <script>
+        function store(){
+            /*console.log(document.getElementById("storageemail").value,
+            document.getElementById("storagepassword").value);*/
+            obj={
+                "email":document.getElementById("storageemail").value,
+                "password":document.getElementById("storagepassword").value
+            }
+            window.localStorage.setItem("login_details",JSON.stringify(obj));
+        }
+        function read(){
+            str=window.localStorage.getItem("login_details");
+            obj1=JSON.parse(str);
+            console.log(obj1);
+        }
+        function remove(){
+            window.localStorage.removeItem("login_details");
+        }
+    </script>
+</html>
