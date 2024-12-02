@@ -1,0 +1,16 @@
+<script>
+    //Whether the browser supports multithreading or not.
+    if(window.Worker){
+        //crating thread for executing add.js file
+        let addThread=new Worker("add.js");
+        //sending json object data to thread using postMessage method
+        addThread.postMessage({num1:10,num2:20});
+        //receving data from thread 
+        addThread.onmessage=function(e){
+            console.log(e.data);
+        }
+    }
+    else{
+        console.log("Not supported");
+    }
+</script>
