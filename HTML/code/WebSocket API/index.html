@@ -1,0 +1,31 @@
+<article id="msg"></article>
+<script>
+    // Check if the browser supports WebSocket
+    // WebSocket is not supported in older browsers, so we need this check
+    if (window.WebSocket) {
+        // Create a new WebSocket connection
+        // The URL specifies the WebSocket server's location  ---ws specifies it is websocket communication
+        let socket = new WebSocket("ws://localhost:8080/");
+
+        // Event handler for when the connection is successfully opened
+        socket.onopen = function () {
+            // Send an initial message to the WebSocket server
+            socket.send("Welcome to WebSocket");
+        };
+
+        // Event handler for when a message is received from the WebSocket server
+        socket.onmessage = function (msgs) {
+            // Append the received message (`msgs.data`) to the <article> element with id="msg"
+            document.getElementById("msg").innerHTML += msgs.data + "<br>";
+        };
+
+        // Event handler for when an error occurs with the WebSocket connection
+        socket.onerror = function (err) {
+            // Log a generic error message to the browser console
+            console.log("Error...!");
+        };
+    } else {
+        // If WebSocket is not supported, notify the user
+        console.log("WebSocket is not supported in this browser.");
+    }
+</script>
