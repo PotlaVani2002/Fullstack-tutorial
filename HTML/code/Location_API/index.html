@@ -1,0 +1,44 @@
+<article id="my_location"></article>
+<br><br>
+<button onclick="clickMe()">Show Location</button> 
+
+<script>
+    function clickMe() {
+        // Check if the browser supports geolocation
+        if (navigator.geolocation) {
+            // Use the geolocation API to get the current position
+            navigator.geolocation.getCurrentPosition(
+                function success(position) {
+                    // If successful, display the latitude and longitude in the <article> element
+                    document.getElementById("my_location").innerHTML = 
+                        "<b>Latitude    </b>"+position.coords.latitude + "<br><b>Lonitude   </b>" + position.coords.longitude;
+                }, 
+                function error(error) {
+                    // Handle potential errors based on the error code
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            // User denied permission to access location
+                            document.getElementById("my_location").innerHTML = "PERMISSION DENIED";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            // Position information is unavailable
+                            document.getElementById("my_location").innerHTML = "POSITION UNAVAILABLE";
+                            break;
+                        case error.TIMEOUT:
+                            // The request to get location timed out
+                            document.getElementById("my_location").innerHTML = "TIMEOUT";
+                            break;
+                        case error.UNKNOWN_ERROR:
+                            // An unknown error occurred
+                            document.getElementById("my_location").innerHTML = "UNKNOWN ERROR";
+                            break;
+                    }
+                }
+            );
+        } else {
+            // If geolocation is not supported by the browser, display an appropriate message
+            document.getElementById("my_location").innerHTML = 
+                "<b>Browser Not supporting Google Maps!! </b>";
+        }
+    }
+</script>
