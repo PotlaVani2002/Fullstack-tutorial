@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <script>
+        window.localStorage.setItem("key1","Hello");
+        window.sessionStorage.setItem("key2","Hello2");
+
+        document.cookie="key1=Hello_1";
+        document.cookie="key3=Hello3;expires="+new Date(2024,11,4).toUTCString();
+
+        console.log(document.cookie);
+        document.cookie="";
+        document.cookie="key1=";
+    </script>
+</body>
+</html>
