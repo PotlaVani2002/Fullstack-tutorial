@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width:320px;
+            height:600px;
+            border:1px solid red;
+            display:inline-block;
+            margin-right:30px;
+        }
+        article{
+            width:300px;
+            height:280px;
+            border:1px solid black;
+            margin-left:10px;
+            margin-top:10px;
+        }
+        img{
+            width:280px;
+            height:250px;
+            margin-top:10px;
+            margin-left:10px;
+        }
+    </style>
+    <script>
+        function drag(event){
+            //if(event.target.id==="img2")   to set only particular image 
+            event.dataTransfer.setData("key1",event.target.id);
+        }
+        function allowDrag(event){
+            event.preventDefault();
+        }
+        function drop(event){
+            let data=event.dataTransfer.getData("key1");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <article id="article1" ondragover="allowDrag(event)" ondrop="drop(event)"></article>
+        <img src="../images/shinchan.png" id="img1" alt="" dragable="true" ondragstart="drag(event)">
+    </section>
+    <section>
+        <article id="article2" ondragover="allowDrag(event)" ondrop="drop(event)"></article>
+        <img src="../images/shinchan.png" alt="" id="img2" dragable="true" ondragstart="drag(event)">
+    </section>
+    <section>
+        <article id="article3" ondragover="allowDrag(event)" ondrop="drop(event)"></article>
+        <img src="../images/shinchan.png" alt="" id="img3" dragable="true" ondragstart="drag(event)">
+    </section>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop API</title>
+    <style>
+        article {
+            width: 500px;
+            height: 250px;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        function drag(event) {
+            // Store the ID of the dragged element in the dataTransfer object
+            event.dataTransfer.setData("key1", event.target.id);
+        }
+
+        function allowDrop(event) {
+            // Allow dropping by preventing the default behavior
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            // Retrieve the stored ID from the dataTransfer object
+            let data = event.dataTransfer.getData("key1");
+            // Append the dragged element to the drop target
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <!-- Drag-and-drop container -->
+    <article id="article1" ondragover="allowDrop(event)" ondrop="drop(event)"></article>
+    <br><br>
+    <!-- Draggable image -->
+    <img src="../images/shinchan.png" 
+         id="dragImage" 
+         width="200px" 
+         height="200px" 
+         alt="Image" 
+         draggable="true" 
+         ondragstart="drag(event)">
+</body>
+</html>
