@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <!-- Include Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <style>
+        article {
+            width: 600px;
+            height: 400px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="displayMap()">Display Map</button>
+    <br><br>
+    <article id="my_map"></article>
+    <script>
+        function displayMap() {
+            // Check if geolocation is supported
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function successCallback(posRes) {
+                        // Extract latitude and longitude
+                        let latitude = posRes.coords.latitude;
+                        let longitude = posRes.coords.longitude;
+
+                        //Merging latitude and longitude -- Create a LatLng object for Google Maps
+                        let latLng = new google.maps.LatLng(latitude, longitude);
+
+                        // Define map options
+                        let mapOptions = {
+                            center: latLng,
+                            zoom: 15,
+                            mapTypeControl:true, //controlling the map zooming without icons ....
+                        };
+
+                        // Create the Global map
+                        let map = new google.maps.Map(
+                            document.getElementById("my_map"),
+                            mapOptions
+                        );
+
+                        // Add a marker to indicate the user's location
+                        let marker = new google.maps.Marker({
+                            position: latLng,
+                            map: map,
+                            title: "You are here!"
+                        });
+                    },
+                    function errorCallback(errRes) {
+                        // Handle geolocation errors
+                        let errorMessage = "";
+                        switch (errRes.code) {
+                            case errRes.PERMISSION_DENIED:
+                                errorMessage = "Permission denied to access location.";
+                                break;
+                            case errRes.POSITION_UNAVAILABLE:
+                                errorMessage = "Position unavailable.";
+                                break;
+                            case errRes.TIMEOUT:
+                                errorMessage = "Location request timed out.";
+                                break;
+                            case errRes.UNKNOWN_ERROR:
+                                errorMessage = "An unknown error occurred.";
+                                break;
+                        }
+                        document.getElementById("my_map").innerHTML = errorMessage;
+                    }
+                );
+            } else {
+                // Geolocation not supported by the browser
+                document.getElementById("my_map").innerHTML =
+                    "Browser does not support Google Maps.";
+            }
+        }
+    </script>
+</body>
+</html>
