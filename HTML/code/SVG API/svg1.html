@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG API</title>
+</head>
+<body>
+    <svg height="160" width="200" style="border:1px double red">
+        <text x="0" y="40" fill="red" transform="rotate(90 50,100)">Hello</text>
+    </svg>
+    <br><br>
+    <svg height="200" weight="500">
+        <polyline points="20,20 40,25 60,40 80,120 120,140 200,180" 
+            style="fill:none;stroke:black;stroke-width:3"/>
+    </svg>
+    <br><br>
+    <svg height="210" width="500" style="border:1px double red;">
+        <polygon points="100,30 40,198 190,78 10,78 160,198"
+          style="stroke:purple;stroke-width:5;fill-rule:evenodd;fill:rgb(241, 129, 17);"/>
+    </svg>
+    <br><br>
+    <svg width="500" height="300" style="border:1px double red;">
+        <polygon points="250,20 300,250 220,250" 
+           style="stroke-width:3; fill:hotpink; stroke:indianred;"/>
+    </svg>
+    <br><br>
+    <svg width="100" height="200" style="border:1px solid red;">
+        <circle cx="50" cy="100" r="40" stroke-width="5" stroke="green" fill="yellow"></circle>
+    </svg>
+    <br><br>
+    <svg width="400" height="400" style="border:1px solid red;">
+        <rect width="300"
+              height="300"
+              stroke="green"
+              stroke-width="3"
+              fill="green"
+              x="50"
+              y="50"
+              fill-opacity="0.3"></rect>
+    </svg>
+    <br><br>
+    <svg width="400" height="400" style="border:1px solid red;">
+        <rect width="300"
+              height="300"
+              stroke="green"
+              stroke-width="3"
+              fill="green"
+              x="50"
+              y="50"
+              fill-opacity="0.3"></rect>
+        <ellipse cx="200" cy="200" rx="120" ry="150" style="fill:red;stroke:blue;stroke-width:3;"></ellipse>
+              <polygon points="200,50 50,300 350,300" 
+              style="stroke-width:3; fill:hotpink; stroke:indianred;"/>
+              <circle cx="200" cy="200" r="50" stroke-width="5" stroke="green" fill="yellow"></circle> 
+    </svg>
+</body>
+</html>
