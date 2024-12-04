@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSQl</title>
+</head>
+
+<body>
+    <script>
+
+        //WebSQL is not supported by chrome,edge,firefox ,instead we can use indexedDB
+        /* if (window.openDatabase) {
+             const db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+         
+             db.transaction(function (tx) {
+                 tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+                 tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "Log message 1")');
+                 tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "Log message 2")');
+             });
+         } else {
+             console.error("Web SQL is not supported in this browser.");
+         }*/
+        let request = indexedDB.open("myDatabase", 1);
+
+        request.onsuccess = function (event) {
+            console.log("Database opened successfully:", event.target.result);
+        };
+
+        request.onerror = function (event) {
+            console.error("Error opening database:", event.target.error);
+        };
+
+        request.onupgradeneeded = function (event) {
+            const db = event.target.result;
+            db.createObjectStore("logs", { keyPath: "id" });
+            console.log("Database setup complete.");
+        };
+
+
+    </script>
+</body>
+
+</html>
