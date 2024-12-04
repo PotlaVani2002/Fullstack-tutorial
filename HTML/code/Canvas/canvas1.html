@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+</head>
+<body onload="fun_one()">
+    <canvas id="my_canvas"></canvas>
+</body>
+<script>
+    function fun_one(){
+        let my_canvas= document.getElementById("my_canvas");
+        let contxt=my_canvas.getContext("2d");
+        contxt.fillRect(50,50,250,200);
+        contxt.clearRect(70,70,210,60);
+        contxt.strokeRect(80,80,40,40);
+    }
+</script>
+</html>
