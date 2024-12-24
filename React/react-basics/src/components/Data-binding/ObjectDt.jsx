@@ -3,7 +3,7 @@ export function ObjectDt() {
     const [product, setProduct] = useState({});
     useEffect(() => {
         setProduct({ name: 'Samsung TV', price: 56000 });
-    })
+    }, [])
     return (
         <div>
             <h2>Product Details</h2>
@@ -15,11 +15,12 @@ export function ObjectDt() {
             </dl>
             <h2>Keys</h2>
             <ul>
-                {Object.keys(product).map(key=>{
-                    <li key={key}>
-                        {key}: {product[key]}
-                    </li>
-                })
+                {
+                    Object.keys(product).map(key => {
+                       return  <li key={key}>
+                            {key}: {product[key]}
+                        </li>
+                    })
                 }
             </ul>
         </div>
