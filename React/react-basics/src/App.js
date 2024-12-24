@@ -8,11 +8,12 @@ import ArrayDt from './components/Data-binding/ArrayDt';
 import { ObjectDt } from './components/Data-binding/ObjectDt';
 import { ArrayObjectsDt } from './components/Data-binding/ArrayObjectsDt';
 import { NestedIterations } from './components/Data-binding/NestedIterations';
+import DateDt from './components/Data-binding/DateDt';
 
 function App() {
   return (
     <div className="App">
-     <NestedIterations />
+     <DateDt />
     </div>
   );
 }
