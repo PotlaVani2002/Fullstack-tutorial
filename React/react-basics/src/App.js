@@ -10,11 +10,12 @@ import { ArrayObjectsDt } from './components/Data-binding/ArrayObjectsDt';
 import { NestedIterations } from './components/Data-binding/NestedIterations';
 import DateDt from './components/Data-binding/DateDt';
 import { DateDt2 } from './components/Data-binding/DateDt2';
+import { Fakestoreapifetch } from './components/FakestoreAPI/Fakestoreapifetch';
 
 function App() {
   return (
     <div className="App">
-     <DateDt2 />
+    <Fakestoreapifetch />
     </div>
   );
 }
